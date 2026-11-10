@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varun Nataraj — Senior Software Engineer</title>
+<meta name="description" content="Varun Nataraj — Senior Software Engineer and team leader building full-stack, PostgreSQL-backed election platforms and parallel data pipelines.">
+<meta property="og:title" content="Varun Nataraj — Senior Software Engineer">
+<meta property="og:description" content="Full-stack and backend engineer. Led a 10-member team delivering election systems for 90 lakh voters.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23123C61'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='white'>VN</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --ink: #1c242c;
+    --muted: #55606c;
+    --navy: #123c61;
+    --navy-deep: #142a41;
+    --accent: #2f6fa3;
+    --line: #dbe3ea;
+    --chip: #eaf1f7;
+    --shadow: 0 1px 2px rgba(18,60,97,.06), 0 8px 24px rgba(18,60,97,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e141a;
+      --surface: #151d25;
+      --ink: #e4e9ee;
+      --muted: #9aa7b4;
+      --navy: #9cc4e6;
+      --navy-deep: #d5e5f3;
+      --accent: #7fb3de;
+      --line: #26323e;
+      --chip: #1c2833;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .brand { font-family: "Source Serif 4", Georgia, serif; font-weight: 700; color: var(--navy-deep); font-size: 18px; }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
+  nav ul a { color: var(--muted); }
+  nav ul a:hover { color: var(--navy); text-decoration: none; }
+  @media (max-width: 640px) { nav ul { display: none; } }
+
+  header.hero { padding: 72px 20px 40px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  h1 { font-family: "Source Serif 4", Georgia, serif; font-size: clamp(38px, 7vw, 58px); line-height: 1.05; margin: 0 0 18px; color: var(--navy-deep); }
+  .lede { font-size: 18px; color: var(--muted); max-width: 680px; margin: 0 0 28px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px;
+    font-size: 14px; font-weight: 600; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  }
+  .btn:hover { text-decoration: none; border-color: var(--accent); }
+  .btn.primary { background: var(--navy); border-color: var(--navy); color: var(--bg); }
+  .btn svg { width: 16px; height: 16px; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 44px 0 0; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+  .stat b { display: block; font-family: "Source Serif 4", Georgia, serif; font-size: 28px; color: var(--navy); line-height: 1.1; }
+  .stat span { font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--navy); margin: 0 0 24px; }
+
+  .job { display: grid; grid-template-columns: 180px 1fr; gap: 24px; margin-bottom: 36px; }
+  .job:last-child { margin-bottom: 0; }
+  .job .when { font-size: 14px; color: var(--muted); padding-top: 3px; }
+  .job h3 { margin: 0; font-size: 19px; color: var(--navy-deep); }
+  .job .role { margin: 2px 0 12px; color: var(--muted); font-size: 15px; }
+  .job ul { margin: 0; padding-left: 18px; }
+  .job li { margin-bottom: 8px; }
+  .job li::marker { color: var(--accent); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tag { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: var(--chip); color: var(--navy); font-weight: 500; }
+  @media (max-width: 640px) { .job { grid-template-columns: 1fr; gap: 4px; } }
+
+  .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .card .kicker { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: .06em; text-transform: uppercase; }
+  .card h3 { margin: 4px 0 10px; font-size: 19px; color: var(--navy-deep); }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+  .card .tags { margin-top: auto; }
+  @media (max-width: 720px) { .projects { grid-template-columns: 1fr; } }
+
+  .skills { display: grid; grid-template-columns: 200px 1fr; gap: 14px 24px; }
+  .skills dt { font-weight: 600; color: var(--navy-deep); font-size: 15px; }
+  .skills dd { margin: 0; }
+  @media (max-width: 640px) { .skills { grid-template-columns: 1fr; gap: 4px; } .skills dd { margin-bottom: 12px; } }
+
+  .edu { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .edu h3 { margin: 0; font-size: 18px; color: var(--navy-deep); }
+  .edu p { margin: 2px 0 0; color: var(--muted); }
+
+  footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Varun Nataraj</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero wrap">
+    <p class="eyebrow">Senior Software Engineer · Team Leader · Bengaluru</p>
+    <h1>Varun Nataraj</h1>
+    <p class="lede">Software engineer and technical team leader building end-to-end web platforms, PostgreSQL-backed services, and parallelized data-processing workflows. I led a 10-member team delivering public-sector election systems serving 1,000+ daily active and peak users, and a voter-ID generation platform associated with ₹15 crore+ in revenue.</p>
+    <div class="actions">
+      <a class="btn primary" href="Varun_Nataraj_Resume.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
+        Download résumé
+      </a>
+      <a class="btn" href="https://github.com/VarunNtrj" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.7 4.9 18.7 5.2 18.7 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
+        GitHub
+      </a>
+      <a class="btn" href="https://www.linkedin.com/in/varun-nataraj" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>90 lakh</b><span>voters served by ID-card generation</span></div>
+      <div class="stat"><b>₹15 cr+</b><span>revenue from voter-ID platform</span></div>
+      <div class="stat"><b>1,000+</b><span>daily active &amp; peak users</span></div>
+      <div class="stat"><b>10</b><span>engineers led across 3 election phases</span></div>
+    </div>
+  </header>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+
+      <article class="job">
+        <div class="when">Sep 2025 – Present</div>
+        <div>
+          <h3>Gundal Business Private Limited</h3>
+          <p class="role">Senior Software Engineer / Team Leader · Bengaluru, India</p>
+          <ul>
+            <li>Led a 10-member team in developing and delivering the Electoral-roll Matrix Application for Greater Bengaluru Authority (GBA) local-body election operations across three election phases generating ₹3 crore+ in revenue.</li>
+            <li>Engineered an end-to-end full-stack election (matrix data collection, electoral-roll generation) management application using Python web frameworks, React/TypeScript, and PostgreSQL, supporting 1,000+ daily active and peak users.</li>
+            <li>Architected parallelized voter-ID card generation software for approximately 90 lakh (9 million) voters across five city corporations; the application generated over ₹15 crore in revenue.</li>
+            <li>Built and maintained client relationships with the State Election Commission and Greater Bengaluru Authority, aligning engineering delivery with stakeholder requirements.</li>
+            <li>Contributed to a pilot for polling-station and assembly-part rationalization, supporting election-data organization and operational planning.</li>
+            <li>Owned development across database design, backend services, frontend functionality, and deployment/DevOps workflows while coordinating engineering execution.</li>
+          </ul>
+          <p style="margin:12px 0 0;font-size:14px;color:var(--muted)">Key projects from this role are described under <a href="#projects">Projects</a>.</p>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">Aug 2020 – Jul 2021</div>
+        <div>
+          <h3>HabbaOnline</h3>
+          <p class="role">Co-founder / Software Developer</p>
+          <ul>
+            <li>Built an end-to-end digital platform connecting Indian festival workers with opportunities during COVID-19 lockdowns, developing application functionality across backend and deployment layers.</li>
+            <li>Coordinated a small team and supported initial user acquisition, securing 30 registrations during festival campaigns.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">AWS</span><span class="tag">Git</span></div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">Jan 2018 – May 2018</div>
+        <div>
+          <h3>Honeywell Technology Solutions</h3>
+          <p class="role">Software Engineering Intern</p>
+          <ul>
+            <li>Developed and simulated multi-sensor data fusion for micro aerial vehicle pose estimation within the aerospace division.</li>
+            <li>Implemented a neural-network prediction algorithm in PyTorch that achieved 92% accuracy in the project evaluation, using a multivariate Kalman-filter-based architecture for position estimation.</li>
+            <li>Facilitated Scrum sessions, helping resolve team blockers and improve on-time delivery; reported a 20% team-efficiency improvement.</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">Git</span><span class="tag">Linux</span><span class="tag">PyTorch</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects · Gundal Business</h2>
+      <div class="projects">
+        <article class="card">
+          <span class="kicker">Matrix v1</span>
+          <h3>Matrix Automation</h3>
+          <p>First version of the Matrix application: polling-station and section matrix entry, re-serialization, ward/PS mapping, TOTP two-factor authentication, CSRF protection, per-user feature controls, and ward-, zone-, and AC-wise progress reports with Excel and PDF exports.</p>
+          <div class="tags"><span class="tag">Flask</span><span class="tag">SQLAlchemy</span><span class="tag">PostgreSQL</span><span class="tag">2FA</span></div>
+        </article>
+        <article class="card">
+          <span class="kicker">Matrix v2</span>
+          <h3>Matrix App v2.0</h3>
+          <p>Re-architected Matrix into a multi-tenant platform with state-owned PostgreSQL databases per tenant (Karnataka, Maharashtra), Alembic migrations, JWT-based authentication, and MinIO object storage, shipped as a Docker Compose stack behind an nginx reverse proxy with OpenAPI-documented REST APIs.</p>
+          <div class="tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">nginx</span></div>
+        </article>
+        <article class="card">
+          <span class="kicker">Voter ID Cards</span>
+          <h3>SVIC</h3>
+          <p>Production pipeline behind voter-ID card generation: bilingual Kannada card PDFs rendered through assembly-constituency jobs split into polling-station units across CPU-parallel workers, with PostgreSQL-tracked job status and failure review, full-AC retry, batched reprints by voter ID, and MS SQL query/index tuning.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Parallel processing</span><span class="tag">PostgreSQL</span><span class="tag">MS SQL</span></div>
+        </article>
+        <article class="card">
+          <span class="kicker">Data · EDA</span>
+          <h3>Atlas EDA</h3>
+          <p>Address-extraction and annotation pipeline that groups voters into provisional address clusters for Assembly Constituency 175, with a SQLite linkage index and a locality → street → apartment drill-down web UI for blinded independent review of voter linkages.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">JavaScript</span><span class="tag">Data pipelines</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Technical skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt><dd>Python, TypeScript, JavaScript, SQL, HTML</dd>
+        <dt>Backend &amp; APIs</dt><dd>Django, Flask, FastAPI, REST API development, Node.js</dd>
+        <dt>Frontend</dt><dd>React.js, TypeScript</dd>
+        <dt>Data &amp; Infrastructure</dt><dd>PostgreSQL, Docker, Linux, AWS, Git, CI/CD</dd>
+        <dt>Engineering Practices</dt><dd>Full-stack development, database design, parallel processing, software architecture, Agile/Scrum, technical leadership</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <div>
+          <h3>BMS College of Engineering</h3>
+          <p>B.E., Information Science · GPA 8.87</p>
+        </div>
+        <p style="color:var(--muted);margin:0">2014 – 2018</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <span>© 2026 Varun Nataraj</span>
+    <span><a href="https://github.com/VarunNtrj">github.com/VarunNtrj</a> · <a href="https://www.linkedin.com/in/varun-nataraj">LinkedIn</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
