@@ -134,7 +134,7 @@
   <header class="hero wrap">
     <p class="eyebrow">Senior Software Engineer · Team Leader · Bengaluru</p>
     <h1>Varun Nataraj</h1>
-    <p class="lede">Software engineer and technical team leader building end-to-end web platforms, PostgreSQL-backed services, and parallelized data-processing workflows. I led a 10-member team delivering public-sector election systems serving 1,000+ daily active and peak users, and a voter-ID generation platform associated with ₹15 crore+ in revenue.</p>
+    <p class="lede">Software engineer and technical team leader building end-to-end web platforms, PostgreSQL-backed services, and parallelized data-processing workflows. I led a 10-member team delivering public-sector election systems serving 1,000+ daily active and peak users, and a voter-ID generation platform associated with ₹18 crore+ in revenue.</p>
     <div class="actions">
       <a class="btn primary" href="Varun_Nataraj_Resume.pdf" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
@@ -152,7 +152,7 @@
 
     <div class="stats">
       <div class="stat"><b>90 lakh</b><span>voters served by ID-card generation</span></div>
-      <div class="stat"><b>₹15 cr+</b><span>revenue from voter-ID platform</span></div>
+      <div class="stat"><b>₹18 cr+</b><span>revenue from voter-ID platform</span></div>
       <div class="stat"><b>1,000+</b><span>daily active &amp; peak users</span></div>
       <div class="stat"><b>10</b><span>engineers led across 3 election phases</span></div>
     </div>
@@ -215,26 +215,26 @@
         <article class="card">
           <span class="kicker">Matrix v1</span>
           <h3>Matrix Automation</h3>
-          <p>First version of the Matrix application: polling-station and section matrix entry, re-serialization, ward/PS mapping, TOTP two-factor authentication, CSRF protection, per-user feature controls, and ward-, zone-, and AC-wise progress reports with Excel and PDF exports.</p>
+          <p>Built the first version of the Matrix application in Flask, SQLAlchemy, and PostgreSQL, with TOTP two-factor authentication, CSRF protection, per-user feature controls, a centralized dashboard for bureaucrats, and progress reports with Excel and PDF exports.</p>
           <div class="tags"><span class="tag">Flask</span><span class="tag">SQLAlchemy</span><span class="tag">PostgreSQL</span><span class="tag">2FA</span></div>
         </article>
         <article class="card">
           <span class="kicker">Matrix v2</span>
           <h3>Matrix App v2.0</h3>
-          <p>Re-architected Matrix into a multi-tenant platform with state-owned PostgreSQL databases per tenant (Karnataka, Maharashtra), Alembic migrations, JWT-based authentication, and MinIO object storage, shipped as a Docker Compose stack behind an nginx reverse proxy with OpenAPI-documented REST APIs.</p>
+          <p>Re-architected Matrix into a multi-tenant platform with state-owned PostgreSQL databases per tenant with Alembic migrations, JWT-based authentication, and MinIO object storage, shipped as a Docker Compose stack behind an nginx reverse proxy with OpenAPI-documented REST APIs.</p>
           <div class="tags"><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">nginx</span></div>
         </article>
         <article class="card">
           <span class="kicker">Voter ID Cards</span>
           <h3>SVIC</h3>
-          <p>Production pipeline behind voter-ID card generation: bilingual Kannada card PDFs rendered through assembly-constituency jobs split into polling-station units across CPU-parallel workers, with PostgreSQL-tracked job status and failure review, full-AC retry, batched reprints by voter ID, and MS SQL query/index tuning.</p>
+          <p>Built the production pipeline behind voter-ID card generation, rendering bilingual Kannada card PDFs across CPU-parallel workers, with PostgreSQL-tracked job status and failure review, full retry, batched reprints by voter ID, and MS SQL query/index tuning.</p>
           <div class="tags"><span class="tag">Python</span><span class="tag">Parallel processing</span><span class="tag">PostgreSQL</span><span class="tag">MS SQL</span></div>
         </article>
         <article class="card">
           <span class="kicker">Address resolution</span>
-          <h3>Marvel</h3>
-          <p>Bilingual (Kannada/English) address-resolution system for 4.8 lakh+ voter records across 390 polling parts in Assembly Constituency 175. Groups addresses into a locality → sublocality → building hierarchy with persistent place identities, publishes each run atomically to PostgreSQL, evaluates against a gold set, and offers a review browser with bilingual search, CSV export, and views of places split across polling parts.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">RapidFuzz</span><span class="tag">Playwright</span></div>
+          <h3>Pilot Project</h3>
+          <p>Built a bilingual (Kannada/English) address-resolution system for 4.8 lakh+ voter records across 390 polling parts, grouping addresses into a locality → sublocality → building hierarchy with persistent place identities, gold-set evaluation, and a review browser that surfaces places split across polling parts.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Bilingual</span><span class="tag">Gold-set evaluation</span></div>
         </article>
       </div>
     </div>
